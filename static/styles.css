@@ -1,5 +1,22 @@
+html {
+    background-color: #f0eff4;
+    color: #313532;
+    font-size: x-large;
+    line-height: 1.75;
+}
+
+a {
+    color: #246EB9;
+}
+
 body {
     font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,9 +33,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-    padding: 18px;
-    border: 1px solid black;
-    border-radius: 2px;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
+    color: #f0eff4;
+    background-color: #313532;
+}
+
+.btn:hover {
+    background-color: #246EB9;
 }
 

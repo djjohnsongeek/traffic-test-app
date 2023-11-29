@@ -8,9 +8,9 @@ app.config.from_mapping(
     SECRET_KEY = "dev",
     DB_NAME = "traffic_app",
     DB_USER = "root",
-    DB_PASSWORD = "admin",
+    DB_PASSWORD = "",
     DB_HOST = "localhost",
-    DB_PORT = 3306,
+    DB_PORT = 3308,
     SOURCES = ["reddit", "discord", "other", "facebook", "twitter", "youtube"],
     USER_COOKIE_KEY = "ta-user-id"
 )
