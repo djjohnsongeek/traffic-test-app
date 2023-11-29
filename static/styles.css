@@ -1,0 +1,24 @@
+body {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+.centered {
+    text-align: center;
+}
+
+.main-column {
+    max-width: 900px;
+    margin: auto;
+}
+
+.btn {
+    padding: 18px;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
