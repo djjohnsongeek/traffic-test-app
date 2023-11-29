@@ -5,6 +5,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/static/styles.css" type="text/css">
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
     <body>
         <div class="main-column">
@@ -14,8 +15,58 @@
                 <hr/>
             </header>
             <section>
-                <h3>Goals</h3>
+                <h3>Site Views</h3>
+                <div id="daily-views-chart"></div>
+                <h3>Site Traffic Sources</h3>
+                <div id="traffic-sources-chart"></div>
+                <h3>Home Page Views</h3>
+                <div id="index-views-chart"></div>
+                <h3>Reports Page Views</h3>
+                <div id="reports-views-chart"></div>
             </section>
         </div>
     </body>
+    <script>
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawCharts);
+  
+      function drawCharts() {
+        // Define the chart to be drawn.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Date');
+        data.addColumn('number', 'Unique Views');
+        data.addColumn('number', 'Total Views');
+        data.addRows([
+          ['10/2/23', 10, 50],
+          ['10/3/23', 86, 200],
+          ['10/4/23', 12, 23],
+          ['10/5/23', 23, 33]
+        ]);
+
+        let options =  {
+            isStacked: true,
+        };
+  
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.ColumnChart(document.getElementById('daily-views-chart'));
+        chart.draw(data, options);
+
+        // Define the chart to be drawn
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Source');
+        data.addColumn('number', 'Count');
+        data.addRows([
+          ['Reddit', 200],
+          ['Discord', 45],
+          ['YouTube', 8],
+          ['Facebook', 0],
+          ['Twitter', 0],
+          ["Other", 20]
+        ]);
+  
+        // Instantiate and draw the chart.
+        var chart = new google.visualization.PieChart(document.getElementById('traffic-sources-chart'));
+        chart.draw(data, null);
+      }
+    </script>
 </html>
